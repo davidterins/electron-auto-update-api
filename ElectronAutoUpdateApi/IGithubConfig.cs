@@ -9,5 +9,7 @@
     public string Repository { get; }
 
     public string Token { get; }
+
+    public bool Private { get; }
   }
 }

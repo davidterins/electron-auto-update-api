@@ -20,7 +20,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://0.0.0.0:5004;http://localhost:5003"
+      "applicationUrl": "https://localhost:5004;http://localhost:5003"
     },
     "ElectronAutoUpdateApi_Prod": {
       "commandName": "Project",

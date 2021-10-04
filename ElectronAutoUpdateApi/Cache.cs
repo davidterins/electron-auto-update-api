@@ -48,10 +48,12 @@ namespace ElectronAutoUpdateApi
 
     private async Task<bool> RefreshLatest()
     {
-      var client = new GitHubClient(new ProductHeaderValue(m_githubConfig.ProductHeader))
+      GitHubClient client = new GitHubClient(new ProductHeaderValue(m_githubConfig.ProductHeader));
+
+      if (m_githubConfig.Private)
       {
-        Credentials = new Credentials(m_githubConfig.Token)
-      };
+        client.Credentials = new Credentials(m_githubConfig.Token);
+      }
 
       Release latestFetch = await client.Repository.Release.GetLatest(m_githubConfig.Owner, m_githubConfig.Repository);
 
