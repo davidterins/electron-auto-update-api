@@ -34,3 +34,4 @@ Just start the application. Debug and test your endpoints with Swagger https://l
 3. Run `heroku apps:create nameOfYourApp`
 4. Modify `./heroku-publish/heroku-publish.bat` by replacing occurances of "nameOfYourApp" to the name used in step 3.
 5. Finally run `./heroku-publish/heroku-publish.bat`.
+6. Checkout your API at https://nameOfYourApp.herokuapp.com/api
