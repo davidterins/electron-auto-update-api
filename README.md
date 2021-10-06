@@ -27,7 +27,7 @@ Just start the application. Debug and test your endpoints with Swagger https://l
 - Heroku CLI installed
 - Docker installed
 
-### Deploy with Heroku CLI
+### Deploy with Heroku CLI 🚀
 
 1. Run: `heroku login`
 2. Run `heroku container:login`
