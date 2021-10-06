@@ -1,33 +1,36 @@
-# dotnet core electric Updates API
+# Electron Auto Update API
 
-## Release to containerized Api to Heroku
+A small and simple api to be used together with [electron-updater's](github.com/Squirrel/Squirrel.Windows/blob/develop/src/Squirrel/UpdateManager.cs) "Generic" provider in your Electron application to make auto updates easier & more custmizable in both development and production environments.
+
+## Configuration
+
+In `./ElectronAutoUpdateApi/appsettings.json` update the following section to the GitHub repository where you are storing your application's releases.
+
+```json
+  "Github": {
+    "Private": "false",
+    "Owner": "st-know-software",
+    "Repository": "electron-auto-update-api",
+    "ProductHeader": "AProductHeader"
+  }
+```
+
+## Development
+
+Just start the application. Debug and test your endpoints with Swagger https://localhost:5004/swagger/.
+
+## Deploy the api as a containerized application to Heroku
 
 ### Requirements
 
-- Heroku CLI
 - Heroku account
-- Existing Heroku app project (electric-updates-api)
-  
-### Quick publish to heroku
+- Heroku CLI installed
+- Docker installed
 
-Run powershell script `./ElectronAutoUpdateApi/heroku-publish/heroku-publish.ps1`
+### Deploy with Heroku CLI
 
-### Publish containerized project to Heroku manualy
-
-1. Publish electricUpdatesApi e.g. `dotnet publish -c release`, do it through VS solution explorer.
-2. Place a Dockerfile inside the publish directory, with content:
-
-```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime
-WORKDIR /app
-COPY . .
-CMD ASPNETCORE_URLS=http://*:$PORT APIKey=$APIKey dotnet electricUpdatesAPI.dll
-```
-
-3. Build and publish image to heroku
-   1. From the publish directory run `docker build -t electric-updates-api .` to build the image.
-   2. Tag the image: `docker tag electric-updates-api registry.heroku.com/electric-updates-api/web`
-   3. Push the image to heroku registry: `docker push registry.heroku.com/electric-updates-api/web`
-4. Go live with heroku CLI.
-   1. Login `heroku login`
-   2. Release `heroku container:release web -a electric-updates-api`
+1. Run: `heroku login`
+2. Run `heroku container:login`
+3. Run `heroku apps:create nameOfYourApp`
+4. Modify `./heroku-publish/heroku-publish.bat` by replacing occurances of "nameOfYourApp" to the name used in step 3.
+5. Finally run `./heroku-publish/heroku-publish.bat`.
