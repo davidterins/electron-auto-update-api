@@ -29,7 +29,7 @@ Just start the application. Debug and test your endpoints with Swagger https://l
 
 ### Deploy with Heroku CLI 🚀
 
-1. Run: `heroku login`
+1. Run `heroku login`
 2. Run `heroku container:login`
 3. Run `heroku apps:create nameOfYourApp`
 4. Modify `./heroku-publish/heroku-publish.bat` by replacing occurances of "nameOfYourApp" to the name used in step 3.
