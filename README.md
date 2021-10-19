@@ -40,6 +40,7 @@ Just start the application. Debug and test your endpoints with Swagger https://l
 1. Run `heroku login`
 2. Run `heroku container:login`
 3. Run `heroku apps:create nameOfYourApp`
-4. Modify `./heroku-publish/heroku-publish.bat` by replacing occurances of "nameOfYourApp" to the name used in step 3.
-5. Finally run `./heroku-publish/heroku-publish.bat`.
-6. Checkout your API at https://nameOfYourApp.herokuapp.com/api
+4. (only if using private github repo) Run `heroku config:set APIKey=YourGHToken --app nameOfYourApp`
+5. Modify `./heroku-publish/heroku-publish.bat` by replacing occurances of "nameOfYourApp" to the name used in step 3.
+6. Finally run `./heroku-publish/heroku-publish.bat`.
+7. Checkout your API at https://nameOfYourApp.herokuapp.com/api
