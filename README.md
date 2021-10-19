@@ -2,7 +2,7 @@
 
 An API to be used together with [electron-updater's](github.com/Squirrel/Squirrel.Windows/blob/develop/src/Squirrel/UpdateManager.cs) "Generic" provider in your Electron application to make auto updates easier & more custmizable in both development and production environments.
 
-Checkout [auto-update-electron-app](https://github.com/st-knot-software/auto-update-electron-app) to see how to configure your Electron app to use the API as a "Generic" provider.
+Checkout [auto-update-electron-app](https://github.com/davidterins/auto-update-electron-app) to see how to configure your Electron app to use the API as a "Generic" provider.
 
 ## Configuration
 
@@ -11,7 +11,7 @@ In `./ElectronAutoUpdateApi/appsettings.json` & `./ElectronAutoUpdateApi/appsett
 ```json
   "Github": {
     "Private": "false",
-    "Owner": "st-know-software",
+    "Owner": "davidterins",
     "Repository": "my-apps-updates-repository",
     "ProductHeader": "AProductHeader"
   }
