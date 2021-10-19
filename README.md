@@ -17,15 +17,15 @@ In `./ElectronAutoUpdateApi/appsettings.json` & `./ElectronAutoUpdateApi/appsett
   }
 ```
 
+## Development
+
 If using the API for a private repository and want to avoid specifying your GitHub token within the source code, run:
 
 ```dotnet
 dotnet user-secrets set "APIKey" "YourGHToken"
 ```
 
-## Development
-
-Just start the application. Debug and test your endpoints with Swagger https://localhost:5004/swagger/.
+Start the application. Debug and test your endpoints with Swagger https://localhost:5004/swagger/.
 
 ## Deploy the api as a containerized application to Heroku
 
