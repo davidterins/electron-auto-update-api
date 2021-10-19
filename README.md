@@ -6,7 +6,7 @@ Checkout [auto-update-electron-app](https://github.com/davidterins/auto-update-e
 
 ## Configuration
 
-In `./ElectronAutoUpdateApi/appsettings.json` & `./ElectronAutoUpdateApi/appsettings.Development.json` update the following section to the GitHub repository where you are storing your application's releases.
+In `./ElectronAutoUpdateApi/appsettings.json` & `./ElectronAutoUpdateApi/appsettings.Development.json` update the following section to the GitHub repository to where you are storing your application's releases.
 
 ```json
   "Github": {
